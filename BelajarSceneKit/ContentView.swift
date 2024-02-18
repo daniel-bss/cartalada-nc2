@@ -11,61 +11,73 @@
 
 import SwiftUI
 import RealityKit
-import ARKit
 
 struct ContentView : View {
-    @ObservedObject var paperVm: PaperViewModel
+    @ObservedObject var paperVm: AppViewModel
     let paperColor: Color
     let words: String
     
-    @State var planeTranslation: SIMD3<Float> = SIMD3<Float>(0, -0.2, -0.35)
+    @State var planeTranslation: SIMD3<Float> = SIMD3<Float>(0, -0.3, -0.45)
     @State var rotation: simd_quatf = simd_quatf(angle: Float(0 * Double.pi / 180.0), axis: SIMD3<Float>(0, 1, 0))
     
     @State var showingText: Bool = true
+    @State var isPosted: Bool = false
     
     var body: some View {
         ZStack {
-            ARViewContainer(
-                paperColor: paperColor,
-                rotation: $rotation,
-                planeTranslation: $planeTranslation,
-                paperVm: paperVm,
-                words: words
+//            ARViewContainer(
+//                paperColor: paperColor,
+//                rotation: $rotation,
+//                planeTranslation: $planeTranslation,
+//                paperVm: paperVm,
+//                words: words,
+//                didPostPaper: $isPosted
+//            )
+            
+            if isPosted {
+//                VStack {
+//                    if showingText {
+//                        Text("SUCCESS POSTED!!")
+////                            .onAppear {
+////                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+////                                    self.showingText = false
+////                                }
+////                            }
+//                    }
+//
+//                    NavigationLink {
+//                        ZStack {
+//                            OnboardingView(paperVm: paperVm)
+//                        }
+//                        .ignoresSafeArea()
+//                        .navigationBarBackButtonHidden(true)
+//                    } label: {
+//                        ZStack {
+//                            RoundedRectangle(cornerRadius: 24)
+//                                .fill(Color(red: (136/255), green: 85/255, blue: 212/255))
+//                                .frame(width: 48, height: 48)
+//                            Image(systemName: "repeat")
+//                                .foregroundColor(.white)
+//                        }
+//                    }
+//                    .padding(.top, 50)
+//                }
                 
-            )
-//            ARViewContainer()
-            if paperVm.isPosted {
-                VStack {
-                    if showingText {
-                        Text("WKAOWKOAKWOWKA")
-                            .onAppear {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                    self.showingText = false
-                                }
-                            }
+                Button(action: {
+                    print("REPEATASA11")
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(Color(red: (136/255), green: 85/255, blue: 212/255))
+                            .frame(width: 48, height: 48)
+                        Image(systemName: "repeat")
+                            .foregroundColor(.white)
                     }
-
-                    NavigationLink {
-                        ZStack {
-                            OnboardingView(paperVm: paperVm)
-                        }
-                        .ignoresSafeArea()
-                        .navigationBarBackButtonHidden(true)
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 24)
-                                .fill(Color(red: (136/255), green: 85/255, blue: 212/255))
-                                .frame(width: 48, height: 48)
-                            Image(systemName: "repeat")
-                                .foregroundColor(.white)
-                        }
-                    }
-                    .padding(.top, 50)
-                }
+                })
             }
             
-            if !paperVm.isPosted {
-                ControlView(rotation: $rotation, planeTranslation: $planeTranslation)
+            if !isPosted {
+//                ControlView(rotation: $rotation, planeTranslation: $planeTranslation)
             }
         }
         .ignoresSafeArea()

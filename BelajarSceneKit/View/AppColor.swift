@@ -14,4 +14,6 @@ extension Color {
     public static let primaryLightGreen = Color(red: 163/255, green: 254/255, blue: 210/255)
     public static let primaryLightBlue = Color(red: 186/255, green: 232/255, blue: 248/255)
     public static let primaryYellow = Color(red: 245/255, green: 209/255, blue: 39/255)
+    
+    public static let customPurple = Color(red: (136/255), green: 85/255, blue: 212/255)
 }

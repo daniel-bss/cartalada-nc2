@@ -6,64 +6,71 @@
 //
 
 import SwiftUI
-import Foundation
 import RealityKit
 
-
 struct ControlView: View {
-    @Binding var rotation: simd_quatf
-    @Binding var planeTranslation: SIMD3<Float>
+    
+    @ObservedObject var vm: AppViewModel
     
     var body: some View {
         Group {
-            HStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.gray)
-                        .frame(width: 150, height: 200)
-                        .opacity(0.3)
-                    
-                    VStack {
-                        AltitudeUpButton()
-                            .padding(.bottom, 10)
-                            .gesture(
-                                DragGesture(minimumDistance: -10)
-                                    .onChanged({ value in
-                                        self.planeTranslation.y += (0.02)
-                                    })
-                                    .onEnded({ _ in })
-                            )
-
-                        
-                        AltitudeDownButton()
-                            .gesture(
-                                DragGesture(minimumDistance: -10)
-                                    .onChanged({ value in
-                                        self.planeTranslation.y -= (0.02)
-                                    })
-                                    .onEnded({ _ in })
-                            )
-                    }
-                }
-                .padding(.trailing, 15)
+            VStack {
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 20)
+                    Circle()
                         .fill(.gray)
-                        .frame(width: 200, height: 200)
+                        .frame(width: 75, height: 200)
                         .opacity(0.3)
-                    JoystickView(rotation: $rotation, planeTranslation: $planeTranslation)
+                    Image(systemName: "camera.metering.center.weighted")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50)
+                    Image(systemName: "plus")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30)
+                        .rotationEffect(Angle(degrees: 45))
+                    
+                }
+                .padding(.bottom, -60)
+                .padding(.trailing, 60)
+                .onTapGesture {
+                    vm.planeTranslation = SIMD3<Float>(0, -0.3, -0.45)
+                    vm.rotation = simd_quatf(angle: Float(0 * Double.pi / 180.0), axis: SIMD3<Float>(0, 1, 0))
+                }
+                
+                HStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                            .frame(width: 150, height: 200)
+                            .opacity(0.3)
+                        
+                        AltitudeView(planeTranslation: $vm.planeTranslation)
+                    }
+                    .padding(.trailing, 5)
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                            .frame(width: 200, height: 200)
+                            .opacity(0.3)
+                        JoystickView(rotation: $vm.rotation, planeTranslation: $vm.planeTranslation)
+                    }
                 }
             }
-            .padding(.top, 550)
+            .padding(.top, 400)
+
         }
     }
 }
 
 struct JoystickView: View {
-    @State var buletanOffset: CGSize = .zero
+    
     @Binding var rotation: simd_quatf
     @Binding var planeTranslation: SIMD3<Float>
+    
+    @State var buletanOffset: CGSize = .zero
     
     var body: some View {
         ZStack {
@@ -72,8 +79,12 @@ struct JoystickView: View {
                 .frame(width: 175, height: 175)
             
             Circle()
-                .fill(RadialGradient(gradient: Gradient(colors: [.black, .white]), center: .center, startRadius: 0, endRadius: 55))
+                .fill(RadialGradient(gradient: Gradient(colors: [.black, .white]), center: .center, startRadius: 0, endRadius: 65))
                 .frame(width: 75, height: 75)
+                .overlay(
+                    Circle()
+                        .stroke(.black, lineWidth: 1)
+                )
                 .offset(self.buletanOffset)
                 .gesture(
                     DragGesture()
@@ -124,6 +135,51 @@ struct JoystickView: View {
     }
 }
 
+struct AltitudeView: View {
+    @State var altitudeOffset: CGSize = .zero
+    @Binding var planeTranslation: SIMD3<Float>
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: 15)
+            .fill(.gray)
+            .frame(width: 110, height: 170)
+        
+        RoundedRectangle(cornerRadius: 15)
+            .fill(LinearGradient(gradient: Gradient(colors: [.gray, .black, .gray]), startPoint: .top, endPoint: .bottom))
+            .frame(width: 120, height: 90)
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.black, lineWidth: 1)
+            )
+            .offset(altitudeOffset)
+            .gesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged({ value in
+                        print(value.translation)
+                        altitudeOffset.width = 0
+                        altitudeOffset.height = value.translation.height
+                        
+                        if (value.translation.height <= -26) {
+                            altitudeOffset.height = -26
+                        } else if (value.translation.height >= 26) {
+                            altitudeOffset.height = 26
+                        }
+                        
+                        if (altitudeOffset.height < 0) { // ATAS
+                            self.planeTranslation.y += (0.02)
+                        } else if (altitudeOffset.height > 0) { // BAWAH
+                            self.planeTranslation.y -= (0.02)
+                            
+                        }
+                        
+                    })
+                    .onEnded({ value in
+                        altitudeOffset = .zero
+                    })
+            )
+    }
+}
+
 struct AltitudeUpButton: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
@@ -142,9 +198,6 @@ struct AltitudeDownButton: View {
 
 struct ControlView_Previews : PreviewProvider {
     static var previews: some View {
-        ControlView(
-            rotation: .constant(simd_quatf(angle: Float(0 * Double.pi / 180.0), axis: SIMD3<Float>(0, 1, 0))),
-            planeTranslation: .constant(SIMD3<Float>(0, -0.5, -0.5))
-        )
+        ControlView(vm: AppViewModel())
     }
 }

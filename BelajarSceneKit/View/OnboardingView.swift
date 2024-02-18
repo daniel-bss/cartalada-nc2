@@ -15,36 +15,44 @@ struct OnboardingView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("WELCOME")
+                Image("cartaladaicon")
+                    .resizable()
+                    .frame(width: 130.0, height: 130.0)
+                    .padding(.bottom, 20)
+                    .cornerRadius(10)
+                
+                Text("What would you like to say today?")
 
                 NavigationLink {
                     ZStack {
-                        SelectPaperView(paperVm: paperVm) // INI YA
+//                        SelectPaperView(paperVm: paperVm)
 //                        ContentView()
                     }
                     .ignoresSafeArea()
                     .navigationBarBackButtonHidden(true)
                 } label: {
-                    HStack {
-                        Image(systemName: "door.right.hand.open")
-                        Text("Select Paper >>>")
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(Color(red: (136/255), green: 85/255, blue: 212/255))
+                            .frame(width: 250, height: 48)
+                        HStack {
+                            Image(systemName: "paperplane")
+                            Text("CHOOSE YOUR PAPER!")
+                        }
+                        .foregroundColor(.white)
                     }
                 }
 
             }
-            .onAppear {
-                self.paperVm.isPosted = false
-            }
+//            .onAppear {
+//                self.paperVm.isPosted = false
+//            }
         }
     }
 }
 
-//struct OnboardingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OnboardingView(
-//            translationY: .constant(0),
-//            rotation: .constant(simd_quatf(angle: Float(0 * Double.pi / 180.0), axis: SIMD3<Float>(0, 1, 0))),
-//            planeTranslation: .constant(SIMD3<Float>(0, -0.5, -0.5))
-//        )
-//    }
-//}
+struct OnboardingView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnboardingView()
+    }
+}

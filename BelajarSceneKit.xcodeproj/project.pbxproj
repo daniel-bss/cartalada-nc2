@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650FDA342B7E1F79005DBB67 /* CobaMainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA332B7E1F79005DBB67 /* CobaMainApp.swift */; };
+		650FDA362B7E2421005DBB67 /* CobaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA352B7E2421005DBB67 /* CobaView.swift */; };
+		650FDA382B7EA4C3005DBB67 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA372B7EA4C3005DBB67 /* Components.swift */; };
+		650FDA3A2B7EB005005DBB67 /* MyARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA392B7EB005005DBB67 /* MyARContainerView.swift */; };
+		651498CE2B813D9600F0E70D /* CartaladaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498CD2B813D9600F0E70D /* CartaladaApp.swift */; };
+		651498D22B813DCD00F0E70D /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D12B813DCD00F0E70D /* MainAppView.swift */; };
+		651498D52B813E7800F0E70D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D42B813E7800F0E70D /* AppViewModel.swift */; };
+		651498D92B81612900F0E70D /* ChoosePaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D82B81612900F0E70D /* ChoosePaper.swift */; };
+		655674932B820BDC00B6CD4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655674922B820BDC00B6CD4D /* Utils.swift */; };
+		655674952B82190C00B6CD4D /* PostedPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655674942B82190C00B6CD4D /* PostedPaper.swift */; };
 		655947942A1ED32100D71942 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655947932A1ED32100D71942 /* AppColor.swift */; };
 		655947962A1ED45800D71942 /* PaperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655947952A1ED45800D71942 /* PaperViewModel.swift */; };
 		655947982A1ED76500D71942 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655947972A1ED76500D71942 /* OnboardingView.swift */; };
-		655947AC2A1F58C400D71942 /* sneaker_airforce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 655947AB2A1F58C400D71942 /* sneaker_airforce.usdz */; };
 		656CEAAE2A1FCDAE007E4166 /* Paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAAD2A1FCDAE007E4166 /* Paper.swift */; };
 		656CEAB12A1FD166007E4166 /* SelectPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAB02A1FD166007E4166 /* SelectPaperView.swift */; };
 		656CEAB32A1FD99E007E4166 /* PaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAB22A1FD99E007E4166 /* PaperView.swift */; };
@@ -23,21 +32,26 @@
 		656CEAD42A200431007E4166 /* planeblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEACD2A200431007E4166 /* planeblue.usdz */; };
 		656CEAD52A200431007E4166 /* planedefault.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEACE2A200431007E4166 /* planedefault.usdz */; };
 		656CEAD72A200A94007E4166 /* CustomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAD62A200A94007E4166 /* CustomEntity.swift */; };
-		656CEAD92A20644D007E4166 /* MySwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAD82A20644D007E4166 /* MySwiftUIView.swift */; };
-		656CEADB2A2064CD007E4166 /* CustomUIViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEADA2A2064CD007E4166 /* CustomUIViewEntity.swift */; };
-		6577377B2A1AA57900B7A99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6577377A2A1AA57900B7A99E /* AppDelegate.swift */; };
 		6577377D2A1AA57900B7A99E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6577377C2A1AA57900B7A99E /* ContentView.swift */; };
 		657737812A1AA57A00B7A99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657737802A1AA57A00B7A99E /* Assets.xcassets */; };
 		657737842A1AA57A00B7A99E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657737832A1AA57A00B7A99E /* Preview Assets.xcassets */; };
 		65BBD0CB2A1BEC2400C7A204 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */; };
-		65BBD0D12A1D8CED00C7A204 /* Coretan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBD0D02A1D8CED00C7A204 /* Coretan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650FDA332B7E1F79005DBB67 /* CobaMainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaMainApp.swift; sourceTree = "<group>"; };
+		650FDA352B7E2421005DBB67 /* CobaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaView.swift; sourceTree = "<group>"; };
+		650FDA372B7EA4C3005DBB67 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		650FDA392B7EB005005DBB67 /* MyARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyARContainerView.swift; sourceTree = "<group>"; };
+		651498CD2B813D9600F0E70D /* CartaladaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaladaApp.swift; sourceTree = "<group>"; };
+		651498D12B813DCD00F0E70D /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
+		651498D42B813E7800F0E70D /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		651498D82B81612900F0E70D /* ChoosePaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePaper.swift; sourceTree = "<group>"; };
+		655674922B820BDC00B6CD4D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		655674942B82190C00B6CD4D /* PostedPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedPaper.swift; sourceTree = "<group>"; };
 		655947932A1ED32100D71942 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		655947952A1ED45800D71942 /* PaperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperViewModel.swift; sourceTree = "<group>"; };
 		655947972A1ED76500D71942 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		655947AB2A1F58C400D71942 /* sneaker_airforce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = sneaker_airforce.usdz; path = ../../../../Downloads/sneaker_airforce.usdz; sourceTree = "<group>"; };
 		656CEAAD2A1FCDAE007E4166 /* Paper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
 		656CEAB02A1FD166007E4166 /* SelectPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaperView.swift; sourceTree = "<group>"; };
 		656CEAB22A1FD99E007E4166 /* PaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperView.swift; sourceTree = "<group>"; };
@@ -50,15 +64,11 @@
 		656CEACD2A200431007E4166 /* planeblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planeblue.usdz; path = ../../Pesawat3d/planeblue.usdz; sourceTree = "<group>"; };
 		656CEACE2A200431007E4166 /* planedefault.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planedefault.usdz; path = ../../Pesawat3d/planedefault.usdz; sourceTree = "<group>"; };
 		656CEAD62A200A94007E4166 /* CustomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEntity.swift; sourceTree = "<group>"; };
-		656CEAD82A20644D007E4166 /* MySwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySwiftUIView.swift; sourceTree = "<group>"; };
-		656CEADA2A2064CD007E4166 /* CustomUIViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewEntity.swift; sourceTree = "<group>"; };
-		657737772A1AA57900B7A99E /* BelajarSceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelajarSceneKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6577377A2A1AA57900B7A99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		657737772A1AA57900B7A99E /* Cartalada AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cartalada AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6577377C2A1AA57900B7A99E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		657737802A1AA57A00B7A99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		657737832A1AA57A00B7A99E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
-		65BBD0D02A1D8CED00C7A204 /* Coretan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coretan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		651498CC2B80BE2C00F0E70D /* Experiments */ = {
+			isa = PBXGroup;
+			children = (
+				650FDA352B7E2421005DBB67 /* CobaView.swift */,
+			);
+			path = Experiments;
+			sourceTree = "<group>";
+		};
+		651498CF2B813DB400F0E70D /* __main */ = {
+			isa = PBXGroup;
+			children = (
+				651498CD2B813D9600F0E70D /* CartaladaApp.swift */,
+				651498D12B813DCD00F0E70D /* MainAppView.swift */,
+				656CEAB02A1FD166007E4166 /* SelectPaperView.swift */,
+				656CEAB22A1FD99E007E4166 /* PaperView.swift */,
+				651498D32B813E6E00F0E70D /* ViewModel */,
+				651498D72B81610900F0E70D /* Model */,
+			);
+			path = __main;
+			sourceTree = "<group>";
+		};
+		651498D32B813E6E00F0E70D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				651498D42B813E7800F0E70D /* AppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		651498D72B81610900F0E70D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				651498D82B81612900F0E70D /* ChoosePaper.swift */,
+				655674922B820BDC00B6CD4D /* Utils.swift */,
+				655674942B82190C00B6CD4D /* PostedPaper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		656CEAAC2A1FCD91007E4166 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +148,7 @@
 		657737782A1AA57900B7A99E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				657737772A1AA57900B7A99E /* BelajarSceneKit.app */,
+				657737772A1AA57900B7A99E /* Cartalada AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,15 +156,13 @@
 		657737792A1AA57900B7A99E /* BelajarSceneKit */ = {
 			isa = PBXGroup;
 			children = (
-				6577377A2A1AA57900B7A99E /* AppDelegate.swift */,
+				651498CF2B813DB400F0E70D /* __main */,
 				6577377C2A1AA57900B7A99E /* ContentView.swift */,
 				656CEAD62A200A94007E4166 /* CustomEntity.swift */,
 				656CEAC62A1FFF26007E4166 /* ARViewContainer.swift */,
-				656CEADA2A2064CD007E4166 /* CustomUIViewEntity.swift */,
 				656CEAAF2A1FCFD3007E4166 /* ViewModel */,
 				656CEAAC2A1FCD91007E4166 /* Model */,
 				65BBD0C92A1BEC1700C7A204 /* View */,
-				655947AB2A1F58C400D71942 /* sneaker_airforce.usdz */,
 				656CEACD2A200431007E4166 /* planeblue.usdz */,
 				656CEACE2A200431007E4166 /* planedefault.usdz */,
 				656CEAC82A200431007E4166 /* planegreen.usdz */,
@@ -125,6 +172,10 @@
 				656CEAC92A200431007E4166 /* planeyellow.usdz */,
 				657737802A1AA57A00B7A99E /* Assets.xcassets */,
 				657737822A1AA57A00B7A99E /* Preview Content */,
+				650FDA332B7E1F79005DBB67 /* CobaMainApp.swift */,
+				650FDA372B7EA4C3005DBB67 /* Components.swift */,
+				650FDA392B7EB005005DBB67 /* MyARContainerView.swift */,
+				651498CC2B80BE2C00F0E70D /* Experiments */,
 			);
 			path = BelajarSceneKit;
 			sourceTree = "<group>";
@@ -143,10 +194,6 @@
 				655947972A1ED76500D71942 /* OnboardingView.swift */,
 				655947932A1ED32100D71942 /* AppColor.swift */,
 				65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */,
-				65BBD0D02A1D8CED00C7A204 /* Coretan.swift */,
-				656CEAB02A1FD166007E4166 /* SelectPaperView.swift */,
-				656CEAB22A1FD99E007E4166 /* PaperView.swift */,
-				656CEAD82A20644D007E4166 /* MySwiftUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,7 +215,7 @@
 			);
 			name = BelajarSceneKit;
 			productName = BelajarSceneKit;
-			productReference = 657737772A1AA57900B7A99E /* BelajarSceneKit.app */;
+			productReference = 657737772A1AA57900B7A99E /* Cartalada AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +265,6 @@
 				657737842A1AA57A00B7A99E /* Preview Assets.xcassets in Resources */,
 				656CEAD12A200431007E4166 /* planelightblue.usdz in Resources */,
 				657737812A1AA57A00B7A99E /* Assets.xcassets in Resources */,
-				655947AC2A1F58C400D71942 /* sneaker_airforce.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,19 +275,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656CEADB2A2064CD007E4166 /* CustomUIViewEntity.swift in Sources */,
 				65BBD0CB2A1BEC2400C7A204 /* ControlView.swift in Sources */,
-				65BBD0D12A1D8CED00C7A204 /* Coretan.swift in Sources */,
 				6577377D2A1AA57900B7A99E /* ContentView.swift in Sources */,
 				656CEAB12A1FD166007E4166 /* SelectPaperView.swift in Sources */,
 				656CEAD72A200A94007E4166 /* CustomEntity.swift in Sources */,
+				651498CE2B813D9600F0E70D /* CartaladaApp.swift in Sources */,
 				656CEAC72A1FFF26007E4166 /* ARViewContainer.swift in Sources */,
-				6577377B2A1AA57900B7A99E /* AppDelegate.swift in Sources */,
-				656CEAD92A20644D007E4166 /* MySwiftUIView.swift in Sources */,
+				650FDA382B7EA4C3005DBB67 /* Components.swift in Sources */,
+				655674952B82190C00B6CD4D /* PostedPaper.swift in Sources */,
+				651498D52B813E7800F0E70D /* AppViewModel.swift in Sources */,
 				656CEAAE2A1FCDAE007E4166 /* Paper.swift in Sources */,
+				650FDA342B7E1F79005DBB67 /* CobaMainApp.swift in Sources */,
+				650FDA3A2B7EB005005DBB67 /* MyARContainerView.swift in Sources */,
 				656CEAB32A1FD99E007E4166 /* PaperView.swift in Sources */,
+				650FDA362B7E2421005DBB67 /* CobaView.swift in Sources */,
+				651498D92B81612900F0E70D /* ChoosePaper.swift in Sources */,
 				655947942A1ED32100D71942 /* AppColor.swift in Sources */,
+				651498D22B813DCD00F0E70D /* MainAppView.swift in Sources */,
 				655947962A1ED45800D71942 /* PaperViewModel.swift in Sources */,
+				655674932B820BDC00B6CD4D /* Utils.swift in Sources */,
 				655947982A1ED76500D71942 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +355,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Cartalada AR";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -356,6 +409,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Cartalada AR";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -374,20 +428,21 @@
 				DEVELOPMENT_TEAM = 4JFN55H5ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cartalada AR";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access for AR experience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielniels.BelajarSceneKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Cartalada AR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,20 +460,21 @@
 				DEVELOPMENT_TEAM = 4JFN55H5ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cartalada AR";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access for AR experience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielniels.BelajarSceneKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Cartalada AR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
