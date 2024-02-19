@@ -30,6 +30,7 @@ struct MainAppView: View {
                                 .padding(.top, -50)
                             
                             Text("What would you like\n to post today?")
+                                .foregroundStyle(.black)
                                 .font(.system(size: 23))
                                 .fontWeight(.medium)
                                 .multilineTextAlignment(.center)
@@ -70,14 +71,21 @@ struct MainAppView: View {
                         
                         VStack {
                             Text("DONE!")
+                                .foregroundStyle(.black)
                                 .font(.system(size: 45))
                                 .fontWeight(.bold)
                             
                             Text("Your paper plane has been posted")
+                                .foregroundStyle(.black)
                             
                             Button(action: {
                                 vm.isShowingWelcomeView = true
                                 vm.didFinishPosting = false
+                                vm.paperSize = .small
+                                vm.paperSizes[0].isClicked = true
+                                vm.paperSizes[1].isClicked = false
+                                vm.paperSizes[2].isClicked = false
+                                
                             }, label: {
                                 Label("Create Again", systemImage: "repeat")
                                     .font(.system(size: 20))

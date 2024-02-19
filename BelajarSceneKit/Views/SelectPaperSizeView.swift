@@ -59,6 +59,7 @@ struct SelectPaperSizeView: View {
                                         .font(.system(size: 18))
                                 }
                             }
+                            .foregroundColor(.black)
                             .shadow(
                                 color: vm.paperSizes[idx].isClicked ? Color.customLightGray : Color.clear,
                                 radius: 42,

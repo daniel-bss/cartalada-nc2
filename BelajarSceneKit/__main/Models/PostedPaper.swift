@@ -13,6 +13,7 @@ struct PostedPaper: Identifiable {
     
     let color: Color
     let words: String
+    let paperSize: PaperSize
     let position: SIMD3<Float>
     
 }

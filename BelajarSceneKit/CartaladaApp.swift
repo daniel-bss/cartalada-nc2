@@ -15,6 +15,7 @@ struct CartaladaApp: App {
     var body: some Scene {
         WindowGroup {
             MainAppView()
+//            WritePaperView(isShowingSheet: .constant(false), vm: AppViewModel())
         }
     }
 }

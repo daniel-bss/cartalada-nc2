@@ -36,17 +36,14 @@ struct ARViewContainer: UIViewRepresentable {
 
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
-        print("BARU NIH!!!")
         
-
         let anchor = AnchorEntity()
         anchor.name = "anchor"
         arView.scene.anchors.append(anchor)
-
-        print("ENTITIES: \(arView.scene.anchors[0].children.count)")
         
         // ============ PAPAN
-        let papan = CustomEntity(color: .green, position: SIMD3<Float>(0,0,-2.5))
+//        let papan = CustomEntity(color: .green, position: SIMD3<Float>(0,0,-2.5))
+        let papan = CustomEntity(color: .green, position: SIMD3<Float>(0,0,-1.5))
         
         papan.collisionSubs.forEach {
             $0.cancel()
@@ -116,10 +113,6 @@ struct ARViewContainer: UIViewRepresentable {
         modelEntity.physicsBody = .init()
         modelEntity.physicsBody?.mode = .kinematic
         anchor.addChild(modelEntity)
-
-        
-        
-        print("TOTAL ENTITIES: \(arView.scene.anchors[0].children.count)")
         
         return arView
     }
@@ -127,53 +120,86 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {
         let entities = uiView.scene.anchors[0].children
         
+        // RESPOND TO JOYSTICK CONTROLVIEW
         for entity in entities {
             if entity.name == self.entityName {
-                print("<><>", entity.name)
                 let paperPlaneEntity = entity
                 paperPlaneEntity.transform.translation = vm.planeTranslation
                 paperPlaneEntity.transform.rotation = vm.rotation
-                
             }
         }
         
     }
     
+    // MARK: CREATE EXISTING POST-IT
+    
     func createPostIt(arView: ARView) {
         let entities = arView.scene.anchors[0].children
+        
+        // GET PAPAN POSITION
         var papan = Entity()
         for entity in entities {
             if entity.name == "papan" {
-                print("\(entity.position)")
                 papan = entity
             }
         }
+        
+        // ADD EXISTING PAST PAPERS
         for postedPaper in vm.postedPapers {
-            let newEntity = ModelEntity(
-                mesh: .generateBox(width: 0.2, height: 0.2, depth: 0.001),
-                materials: [SimpleMaterial(
-                    color: UIColor(postedPaper.color),
-                    isMetallic: false)
+            
+            var dimension: Float = 0
+            var yOffset: Float = 0
+            
+            switch postedPaper.paperSize {
+            case .small:
+                dimension = 0.2
+                yOffset = -0.095
+            case .medium:
+                dimension = 0.25
+                yOffset = -0.12
+            case .large:
+                dimension = 0.3
+                yOffset = -0.15
+            }
+            
+            let paperEntity = ModelEntity(
+                mesh: .generateBox(
+                    width: dimension,
+                    height: dimension,
+                    depth: 0.001
+                ),
+                materials: [
+                    SimpleMaterial(
+                        color: UIColor(postedPaper.color),
+                        isMetallic: false
+                    )
                 ]
             )
-            newEntity.name = "post-it"
+            paperEntity.name = "post-it"
             
             let textEntity = ModelEntity(
                 mesh: .generateText(
                     postedPaper.words,
                     extrusionDepth: 0.001,
                     font: .systemFont(ofSize: 0.017, weight: .bold),
-                    containerFrame: CGRect(x: -0.19/2.0, y: -0.12, width: 0.19, height: 0.19),
+                    containerFrame: CGRect(
+                        x: (-(Double(dimension) - 0.01) / 2.0) + 0.003,
+                        y: Double(yOffset),
+                        width: Double(dimension - 0.01),
+                        height: Double(dimension - 0.01)
+                    ),
                     alignment: .left,
                     lineBreakMode: .byWordWrapping
                 ),
-                materials: [SimpleMaterial(
-                    color: .black,
-                    isMetallic: false)
+                materials: [
+                    SimpleMaterial(
+                        color: .black,
+                        isMetallic: false
+                    )
                 ]
             )
             
-            newEntity.position = SIMD3<Float>(
+            paperEntity.position = SIMD3<Float>(
                 x: postedPaper.position.x,
                 y: postedPaper.position.y,
                 z: papan.position.z + 0.05
@@ -182,8 +208,9 @@ struct ARViewContainer: UIViewRepresentable {
             textEntity.position = .zero
             textEntity.position.z += 0.005
             
-            newEntity.addChild(textEntity)
-            arView.scene.anchors[0].addChild(newEntity)
+            paperEntity.addChild(textEntity)
+            
+            arView.scene.anchors[0].addChild(paperEntity)
         }
 
     }

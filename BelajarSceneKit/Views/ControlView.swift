@@ -32,6 +32,7 @@ struct ControlView: View {
                         .rotationEffect(Angle(degrees: 45))
                     
                 }
+                .foregroundColor(.black)
                 .padding(.bottom, -60)
                 .padding(.trailing, 60)
                 .onTapGesture {
@@ -155,7 +156,6 @@ struct AltitudeView: View {
             .gesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged({ value in
-                        print(value.translation)
                         altitudeOffset.width = 0
                         altitudeOffset.height = value.translation.height
                         

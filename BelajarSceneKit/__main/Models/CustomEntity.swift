@@ -68,11 +68,28 @@ class CustomEntity: Entity, HasModel, HasAnchoring, HasCollision {
                 return
             }
             
+            var dimension: Float = 0
+            var yOffset: Float = 0
+            
+            switch paperVm.paperSize {
+            case .small:
+                dimension = 0.2
+                yOffset = -0.095
+            case .medium:
+                dimension = 0.25
+                yOffset = -0.12
+            case .large:
+                dimension = 0.3
+                yOffset = -0.15
+            }
+            
             let newEntity = ModelEntity(
-                mesh: .generateBox(width: 0.2, height: 0.2, depth: 0.001),
-                materials: [SimpleMaterial(
-                    color: UIColor(paperColor),
-                    isMetallic: false)
+                mesh: .generateBox(width: dimension, height: dimension, depth: 0.001),
+                materials: [
+                    SimpleMaterial(
+                        color: UIColor(paperColor),
+                        isMetallic: false
+                    )
                 ]
             )
             
@@ -81,13 +98,20 @@ class CustomEntity: Entity, HasModel, HasAnchoring, HasCollision {
                     words,
                     extrusionDepth: 0.001,
                     font: .systemFont(ofSize: 0.017, weight: .bold),
-                    containerFrame: CGRect(x: -0.19/2.0, y: -0.12, width: 0.19, height: 0.19),
+                    containerFrame: CGRect(
+                        x: (-(Double(dimension) - 0.01) / 2.0) + 0.003,
+                        y: Double(yOffset),
+                        width: Double(dimension - 0.01),
+                        height: Double(dimension - 0.01)
+                    ),
                     alignment: .left,
                     lineBreakMode: .byWordWrapping
                 ),
-                materials: [SimpleMaterial(
-                    color: .black,
-                    isMetallic: false)
+                materials: [
+                    SimpleMaterial(
+                        color: .black,
+                        isMetallic: false
+                    )
                 ]
             )
             
@@ -100,21 +124,18 @@ class CustomEntity: Entity, HasModel, HasAnchoring, HasCollision {
             
             for entity in arView.scene.anchors[0].children {
                 if entity.name.contains("plane") {
-                    print("POSITION", entity.position)
                     entity.removeFromParent()
                     
                     self.customEntityDelegate?.didCollide(
                         postedPaper: PostedPaper(
                             color: paperColor,
                             words: words,
+                            paperSize: paperVm.paperSize,
                             position: newEntity.position
                         )
                     )
                 }
             }
-            
-            
-            
         })
         
       }

@@ -30,9 +30,9 @@ struct SelectPaperView: View {
                 
                 VStack(spacing: 25) {
                     Text("Choose your paper plane color!")
+                        .foregroundStyle(.black)
                         .font(.system(size: 22))
                         .fontWeight(.bold)
-                    
                     
                     VStack {
                         HStack {
