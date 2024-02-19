@@ -16,29 +16,44 @@ struct MainAppView: View {
         ZStack {
             if vm.isShowingWelcomeView {
                 NavigationView {
-                    VStack {
-                        Image("cartaladaicon")
-                            .resizable()
-                            .frame(width: 130.0, height: 130.0)
-                            .cornerRadius(10)
-                            .padding(.bottom, 20)
+                    ZStack {
+                        Color.white.ignoresSafeArea()
                         
-                        Text("What would you like to post today?")
-                        
-                        Button(action: {
-                            self.isShowingSheet = true
-                        }, label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 24)
-                                    .fill(Color(red: (136/255), green: 85/255, blue: 212/255))
-                                    .frame(width: 250, height: 48)
+                        VStack {
+                            Image("cartaladaicon")
+                                .resizable()
+                                .frame(width: 160.0, height: 160.0)
+                                .padding(18)
+                                .background(Color.iconBackground)
+                                .cornerRadius(15)
+                                .padding(.bottom, 20)
+                                .padding(.top, -50)
+                            
+                            Text("What would you like\n to post today?")
+                                .font(.system(size: 23))
+                                .fontWeight(.medium)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom, 20)
+                            
+                            Button(action: {
+                                self.isShowingSheet = true
+                            }, label: {
                                 HStack {
-                                    Image(systemName: "paperplane")
+                                    Image(systemName: "paperplane.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 23, height: 23)
                                     Text("CHOOSE YOUR PAPER!")
+                                        .font(.system(size: 18))
+                                        .fontWeight(.semibold)
                                 }
                                 .foregroundColor(.white)
-                            }
-                        })
+                                .padding(15)
+                                .background(Color.customPurple)
+                                .cornerRadius(20)
+                                .shadow(radius: 5, y: 4)
+                            })
+                        }
                     }
                     .sheet(isPresented: $isShowingSheet, content: {
                         SelectPaperView(isShowingSheet: $isShowingSheet, vm: vm)
@@ -46,8 +61,6 @@ struct MainAppView: View {
                 }
             } else {
                 ARViewContainer(vm: vm)
-//                Rectangle()
-//                    .foregroundColor(.black.opacity(0.2))
                 
                 if !vm.didFinishPosting {
                     ControlView(vm: vm)

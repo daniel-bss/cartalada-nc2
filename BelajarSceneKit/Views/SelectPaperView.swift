@@ -26,10 +26,13 @@ struct SelectPaperView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                VStack {
+                Color.white.ignoresSafeArea()
+                
+                VStack(spacing: 25) {
                     Text("Choose your paper plane color!")
-                        .font(.headline)
-                        .fontWeight(.heavy)
+                        .font(.system(size: 22))
+                        .fontWeight(.bold)
+                    
                     
                     VStack {
                         HStack {
@@ -77,28 +80,29 @@ struct SelectPaperView: View {
                             }
                         }
                     }
-                    .padding(.bottom, 25)
+                    .padding(.bottom, 65)
                 }
                 
                 ForEach(listOfPapers) { paper in
                     if paper.isClicked {
                         NavigationLink {
-                            PaperView(isShowingSheet: $isShowingSheet, vm: vm)
+                            SelectPaperSizeView(isShowingSheet: $isShowingSheet, vm: vm)
                         } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 24)
-                                    .fill(Color.customPurple)
-                                    .frame(width: 130, height: 48)
-                                HStack {
-                                    Image(systemName: "pencil.and.outline")
-                                    Text("WRITE!")
-                                }
-                                .foregroundColor(.white)
+                            HStack {
+                                Text("NEXT")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.bold)
                             }
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .padding(.horizontal, 20)
+                            .background(Color.customPurple)
+                            .cornerRadius(13)
+                            .shadow(radius: 2, y: 4)
                         }
                     }
                 }
-                .offset(y: 160)
+                .offset(y: 145)
                 
             }
             .toolbar {

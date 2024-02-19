@@ -7,65 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		650FDA342B7E1F79005DBB67 /* CobaMainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA332B7E1F79005DBB67 /* CobaMainApp.swift */; };
-		650FDA362B7E2421005DBB67 /* CobaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA352B7E2421005DBB67 /* CobaView.swift */; };
-		650FDA382B7EA4C3005DBB67 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA372B7EA4C3005DBB67 /* Components.swift */; };
-		650FDA3A2B7EB005005DBB67 /* MyARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650FDA392B7EB005005DBB67 /* MyARContainerView.swift */; };
 		651498CE2B813D9600F0E70D /* CartaladaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498CD2B813D9600F0E70D /* CartaladaApp.swift */; };
 		651498D22B813DCD00F0E70D /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D12B813DCD00F0E70D /* MainAppView.swift */; };
 		651498D52B813E7800F0E70D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D42B813E7800F0E70D /* AppViewModel.swift */; };
 		651498D92B81612900F0E70D /* ChoosePaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D82B81612900F0E70D /* ChoosePaper.swift */; };
+		652706AA2B8299C100A189C6 /* planeblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706A92B8299C100A189C6 /* planeblue.usdz */; };
+		652706B12B829A2E00A189C6 /* planegreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AB2B829A2E00A189C6 /* planegreen.usdz */; };
+		652706B22B829A2E00A189C6 /* planelightblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AC2B829A2E00A189C6 /* planelightblue.usdz */; };
+		652706B32B829A2E00A189C6 /* planedefault.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AD2B829A2E00A189C6 /* planedefault.usdz */; };
+		652706B42B829A2E00A189C6 /* planelightgreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AE2B829A2E00A189C6 /* planelightgreen.usdz */; };
+		652706B52B829A2E00A189C6 /* planepink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AF2B829A2E00A189C6 /* planepink.usdz */; };
+		652706B62B829A2E00A189C6 /* planeyellow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706B02B829A2E00A189C6 /* planeyellow.usdz */; };
+		652706B82B829AAE00A189C6 /* SelectPaperSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652706B72B829AAE00A189C6 /* SelectPaperSizeView.swift */; };
 		655674932B820BDC00B6CD4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655674922B820BDC00B6CD4D /* Utils.swift */; };
 		655674952B82190C00B6CD4D /* PostedPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655674942B82190C00B6CD4D /* PostedPaper.swift */; };
-		655947942A1ED32100D71942 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655947932A1ED32100D71942 /* AppColor.swift */; };
-		655947962A1ED45800D71942 /* PaperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655947952A1ED45800D71942 /* PaperViewModel.swift */; };
-		655947982A1ED76500D71942 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655947972A1ED76500D71942 /* OnboardingView.swift */; };
-		656CEAAE2A1FCDAE007E4166 /* Paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAAD2A1FCDAE007E4166 /* Paper.swift */; };
+		655947942A1ED32100D71942 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655947932A1ED32100D71942 /* Color+Ext.swift */; };
 		656CEAB12A1FD166007E4166 /* SelectPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAB02A1FD166007E4166 /* SelectPaperView.swift */; };
-		656CEAB32A1FD99E007E4166 /* PaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAB22A1FD99E007E4166 /* PaperView.swift */; };
+		656CEAB32A1FD99E007E4166 /* WritePaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAB22A1FD99E007E4166 /* WritePaperView.swift */; };
 		656CEAC72A1FFF26007E4166 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAC62A1FFF26007E4166 /* ARViewContainer.swift */; };
-		656CEACF2A200431007E4166 /* planegreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEAC82A200431007E4166 /* planegreen.usdz */; };
-		656CEAD02A200431007E4166 /* planeyellow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEAC92A200431007E4166 /* planeyellow.usdz */; };
-		656CEAD12A200431007E4166 /* planelightblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEACA2A200431007E4166 /* planelightblue.usdz */; };
-		656CEAD22A200431007E4166 /* planepink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEACB2A200431007E4166 /* planepink.usdz */; };
-		656CEAD32A200431007E4166 /* planelightgreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEACC2A200431007E4166 /* planelightgreen.usdz */; };
-		656CEAD42A200431007E4166 /* planeblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEACD2A200431007E4166 /* planeblue.usdz */; };
-		656CEAD52A200431007E4166 /* planedefault.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 656CEACE2A200431007E4166 /* planedefault.usdz */; };
 		656CEAD72A200A94007E4166 /* CustomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAD62A200A94007E4166 /* CustomEntity.swift */; };
-		6577377D2A1AA57900B7A99E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6577377C2A1AA57900B7A99E /* ContentView.swift */; };
 		657737812A1AA57A00B7A99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657737802A1AA57A00B7A99E /* Assets.xcassets */; };
 		657737842A1AA57A00B7A99E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657737832A1AA57A00B7A99E /* Preview Assets.xcassets */; };
 		65BBD0CB2A1BEC2400C7A204 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		650FDA332B7E1F79005DBB67 /* CobaMainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaMainApp.swift; sourceTree = "<group>"; };
-		650FDA352B7E2421005DBB67 /* CobaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaView.swift; sourceTree = "<group>"; };
-		650FDA372B7EA4C3005DBB67 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		650FDA392B7EB005005DBB67 /* MyARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyARContainerView.swift; sourceTree = "<group>"; };
 		651498CD2B813D9600F0E70D /* CartaladaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaladaApp.swift; sourceTree = "<group>"; };
 		651498D12B813DCD00F0E70D /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
 		651498D42B813E7800F0E70D /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		651498D82B81612900F0E70D /* ChoosePaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePaper.swift; sourceTree = "<group>"; };
+		652706A92B8299C100A189C6 /* planeblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planeblue.usdz; sourceTree = "<group>"; };
+		652706AB2B829A2E00A189C6 /* planegreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planegreen.usdz; sourceTree = "<group>"; };
+		652706AC2B829A2E00A189C6 /* planelightblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planelightblue.usdz; sourceTree = "<group>"; };
+		652706AD2B829A2E00A189C6 /* planedefault.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planedefault.usdz; sourceTree = "<group>"; };
+		652706AE2B829A2E00A189C6 /* planelightgreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planelightgreen.usdz; sourceTree = "<group>"; };
+		652706AF2B829A2E00A189C6 /* planepink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planepink.usdz; sourceTree = "<group>"; };
+		652706B02B829A2E00A189C6 /* planeyellow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planeyellow.usdz; sourceTree = "<group>"; };
+		652706B72B829AAE00A189C6 /* SelectPaperSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaperSizeView.swift; sourceTree = "<group>"; };
 		655674922B820BDC00B6CD4D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		655674942B82190C00B6CD4D /* PostedPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedPaper.swift; sourceTree = "<group>"; };
-		655947932A1ED32100D71942 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
-		655947952A1ED45800D71942 /* PaperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperViewModel.swift; sourceTree = "<group>"; };
-		655947972A1ED76500D71942 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		656CEAAD2A1FCDAE007E4166 /* Paper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
+		655947932A1ED32100D71942 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		656CEAB02A1FD166007E4166 /* SelectPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaperView.swift; sourceTree = "<group>"; };
-		656CEAB22A1FD99E007E4166 /* PaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperView.swift; sourceTree = "<group>"; };
+		656CEAB22A1FD99E007E4166 /* WritePaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePaperView.swift; sourceTree = "<group>"; };
 		656CEAC62A1FFF26007E4166 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
-		656CEAC82A200431007E4166 /* planegreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planegreen.usdz; path = ../../Pesawat3d/planegreen.usdz; sourceTree = "<group>"; };
-		656CEAC92A200431007E4166 /* planeyellow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planeyellow.usdz; path = ../../Pesawat3d/planeyellow.usdz; sourceTree = "<group>"; };
-		656CEACA2A200431007E4166 /* planelightblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planelightblue.usdz; path = ../../Pesawat3d/planelightblue.usdz; sourceTree = "<group>"; };
-		656CEACB2A200431007E4166 /* planepink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planepink.usdz; path = ../../Pesawat3d/planepink.usdz; sourceTree = "<group>"; };
-		656CEACC2A200431007E4166 /* planelightgreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planelightgreen.usdz; path = ../../Pesawat3d/planelightgreen.usdz; sourceTree = "<group>"; };
-		656CEACD2A200431007E4166 /* planeblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planeblue.usdz; path = ../../Pesawat3d/planeblue.usdz; sourceTree = "<group>"; };
-		656CEACE2A200431007E4166 /* planedefault.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = planedefault.usdz; path = ../../Pesawat3d/planedefault.usdz; sourceTree = "<group>"; };
 		656CEAD62A200A94007E4166 /* CustomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEntity.swift; sourceTree = "<group>"; };
 		657737772A1AA57900B7A99E /* Cartalada AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cartalada AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6577377C2A1AA57900B7A99E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		657737802A1AA57A00B7A99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		657737832A1AA57A00B7A99E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
@@ -82,59 +68,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		651498CC2B80BE2C00F0E70D /* Experiments */ = {
+		651498D72B81610900F0E70D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				650FDA352B7E2421005DBB67 /* CobaView.swift */,
-			);
-			path = Experiments;
-			sourceTree = "<group>";
-		};
-		651498CF2B813DB400F0E70D /* __main */ = {
-			isa = PBXGroup;
-			children = (
-				651498CD2B813D9600F0E70D /* CartaladaApp.swift */,
-				651498D12B813DCD00F0E70D /* MainAppView.swift */,
-				656CEAB02A1FD166007E4166 /* SelectPaperView.swift */,
-				656CEAB22A1FD99E007E4166 /* PaperView.swift */,
-				651498D32B813E6E00F0E70D /* ViewModel */,
-				651498D72B81610900F0E70D /* Model */,
-			);
-			path = __main;
-			sourceTree = "<group>";
-		};
-		651498D32B813E6E00F0E70D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				651498D42B813E7800F0E70D /* AppViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		651498D72B81610900F0E70D /* Model */ = {
-			isa = PBXGroup;
-			children = (
+				656CEAD62A200A94007E4166 /* CustomEntity.swift */,
 				651498D82B81612900F0E70D /* ChoosePaper.swift */,
-				655674922B820BDC00B6CD4D /* Utils.swift */,
 				655674942B82190C00B6CD4D /* PostedPaper.swift */,
 			);
-			path = Model;
+			name = Models;
+			path = __main/Models;
 			sourceTree = "<group>";
 		};
-		656CEAAC2A1FCD91007E4166 /* Model */ = {
+		652706A82B8299AE00A189C6 /* USDZ Assets */ = {
 			isa = PBXGroup;
 			children = (
-				656CEAAD2A1FCDAE007E4166 /* Paper.swift */,
+				652706AD2B829A2E00A189C6 /* planedefault.usdz */,
+				652706AB2B829A2E00A189C6 /* planegreen.usdz */,
+				652706AC2B829A2E00A189C6 /* planelightblue.usdz */,
+				652706AE2B829A2E00A189C6 /* planelightgreen.usdz */,
+				652706AF2B829A2E00A189C6 /* planepink.usdz */,
+				652706B02B829A2E00A189C6 /* planeyellow.usdz */,
+				652706A92B8299C100A189C6 /* planeblue.usdz */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		656CEAAF2A1FCFD3007E4166 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				655947952A1ED45800D71942 /* PaperViewModel.swift */,
-			);
-			path = ViewModel;
+			path = "USDZ Assets";
 			sourceTree = "<group>";
 		};
 		6577376E2A1AA57900B7A99E = {
@@ -156,26 +112,14 @@
 		657737792A1AA57900B7A99E /* BelajarSceneKit */ = {
 			isa = PBXGroup;
 			children = (
-				651498CF2B813DB400F0E70D /* __main */,
-				6577377C2A1AA57900B7A99E /* ContentView.swift */,
-				656CEAD62A200A94007E4166 /* CustomEntity.swift */,
-				656CEAC62A1FFF26007E4166 /* ARViewContainer.swift */,
-				656CEAAF2A1FCFD3007E4166 /* ViewModel */,
-				656CEAAC2A1FCD91007E4166 /* Model */,
-				65BBD0C92A1BEC1700C7A204 /* View */,
-				656CEACD2A200431007E4166 /* planeblue.usdz */,
-				656CEACE2A200431007E4166 /* planedefault.usdz */,
-				656CEAC82A200431007E4166 /* planegreen.usdz */,
-				656CEACA2A200431007E4166 /* planelightblue.usdz */,
-				656CEACC2A200431007E4166 /* planelightgreen.usdz */,
-				656CEACB2A200431007E4166 /* planepink.usdz */,
-				656CEAC92A200431007E4166 /* planeyellow.usdz */,
+				652706A82B8299AE00A189C6 /* USDZ Assets */,
+				651498CD2B813D9600F0E70D /* CartaladaApp.swift */,
+				651498D42B813E7800F0E70D /* AppViewModel.swift */,
+				65DD3AC32B82984200A01D0B /* Views */,
+				651498D72B81610900F0E70D /* Models */,
+				65DD3AC22B82984000A01D0B /* Misc */,
 				657737802A1AA57A00B7A99E /* Assets.xcassets */,
 				657737822A1AA57A00B7A99E /* Preview Content */,
-				650FDA332B7E1F79005DBB67 /* CobaMainApp.swift */,
-				650FDA372B7EA4C3005DBB67 /* Components.swift */,
-				650FDA392B7EB005005DBB67 /* MyARContainerView.swift */,
-				651498CC2B80BE2C00F0E70D /* Experiments */,
 			);
 			path = BelajarSceneKit;
 			sourceTree = "<group>";
@@ -188,14 +132,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		65BBD0C92A1BEC1700C7A204 /* View */ = {
+		65DD3AC22B82984000A01D0B /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				655947972A1ED76500D71942 /* OnboardingView.swift */,
-				655947932A1ED32100D71942 /* AppColor.swift */,
+				655674922B820BDC00B6CD4D /* Utils.swift */,
+				655947932A1ED32100D71942 /* Color+Ext.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		65DD3AC32B82984200A01D0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				651498D12B813DCD00F0E70D /* MainAppView.swift */,
+				656CEAB02A1FD166007E4166 /* SelectPaperView.swift */,
+				652706B72B829AAE00A189C6 /* SelectPaperSizeView.swift */,
+				656CEAB22A1FD99E007E4166 /* WritePaperView.swift */,
+				656CEAC62A1FFF26007E4166 /* ARViewContainer.swift */,
 				65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,15 +212,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656CEACF2A200431007E4166 /* planegreen.usdz in Resources */,
-				656CEAD42A200431007E4166 /* planeblue.usdz in Resources */,
-				656CEAD32A200431007E4166 /* planelightgreen.usdz in Resources */,
-				656CEAD02A200431007E4166 /* planeyellow.usdz in Resources */,
-				656CEAD52A200431007E4166 /* planedefault.usdz in Resources */,
-				656CEAD22A200431007E4166 /* planepink.usdz in Resources */,
+				652706B42B829A2E00A189C6 /* planelightgreen.usdz in Resources */,
+				652706B12B829A2E00A189C6 /* planegreen.usdz in Resources */,
+				652706AA2B8299C100A189C6 /* planeblue.usdz in Resources */,
+				652706B32B829A2E00A189C6 /* planedefault.usdz in Resources */,
+				652706B52B829A2E00A189C6 /* planepink.usdz in Resources */,
 				657737842A1AA57A00B7A99E /* Preview Assets.xcassets in Resources */,
-				656CEAD12A200431007E4166 /* planelightblue.usdz in Resources */,
+				652706B22B829A2E00A189C6 /* planelightblue.usdz in Resources */,
 				657737812A1AA57A00B7A99E /* Assets.xcassets in Resources */,
+				652706B62B829A2E00A189C6 /* planeyellow.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,25 +232,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BBD0CB2A1BEC2400C7A204 /* ControlView.swift in Sources */,
-				6577377D2A1AA57900B7A99E /* ContentView.swift in Sources */,
 				656CEAB12A1FD166007E4166 /* SelectPaperView.swift in Sources */,
 				656CEAD72A200A94007E4166 /* CustomEntity.swift in Sources */,
 				651498CE2B813D9600F0E70D /* CartaladaApp.swift in Sources */,
 				656CEAC72A1FFF26007E4166 /* ARViewContainer.swift in Sources */,
-				650FDA382B7EA4C3005DBB67 /* Components.swift in Sources */,
 				655674952B82190C00B6CD4D /* PostedPaper.swift in Sources */,
 				651498D52B813E7800F0E70D /* AppViewModel.swift in Sources */,
-				656CEAAE2A1FCDAE007E4166 /* Paper.swift in Sources */,
-				650FDA342B7E1F79005DBB67 /* CobaMainApp.swift in Sources */,
-				650FDA3A2B7EB005005DBB67 /* MyARContainerView.swift in Sources */,
-				656CEAB32A1FD99E007E4166 /* PaperView.swift in Sources */,
-				650FDA362B7E2421005DBB67 /* CobaView.swift in Sources */,
+				656CEAB32A1FD99E007E4166 /* WritePaperView.swift in Sources */,
 				651498D92B81612900F0E70D /* ChoosePaper.swift in Sources */,
-				655947942A1ED32100D71942 /* AppColor.swift in Sources */,
+				652706B82B829AAE00A189C6 /* SelectPaperSizeView.swift in Sources */,
+				655947942A1ED32100D71942 /* Color+Ext.swift in Sources */,
 				651498D22B813DCD00F0E70D /* MainAppView.swift in Sources */,
-				655947962A1ED45800D71942 /* PaperViewModel.swift in Sources */,
 				655674932B820BDC00B6CD4D /* Utils.swift in Sources */,
-				655947982A1ED76500D71942 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
