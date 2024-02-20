@@ -72,7 +72,6 @@ struct WritePaperView: View {
                 Button(action: {
                     self.updateViewModel()
                     focusedTextField = nil
-                    print(words.count)
                 }, label: {
                     HStack {
                         Image(systemName: "paperplane.fill")

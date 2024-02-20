@@ -19,28 +19,23 @@ class CustomEntity: Entity, HasModel, HasAnchoring, HasCollision {
     
     public var collisionSubs = [Cancellable]()
     
-    required init(color: UIColor) {
+    required init(color: UIColor, position: SIMD3<Float>, width: Float, height: Float) {
         super.init()
         
         self.collision = CollisionComponent(
-            shapes: [.generateBox(size: [1.2, 0.9, 0.04])],
+            shapes: [.generateBox(size: [width, height, 0.03])],
             mode: .trigger,
             filter: .sensor
         )
         
         self.model = ModelComponent(
-            mesh: .generateBox(size: [1.2, 0.9, 0.03]),
+            mesh: .generateBox(size: [width, height, 0.03]),
             materials: [SimpleMaterial(
                 color: color,
                 isMetallic: false)
             ]
         )
         
-        self.name = "papan"
-    }
-    
-    convenience init(color: UIColor, position: SIMD3<Float>) {
-        self.init(color: color)
         self.position = position
     }
     
@@ -64,7 +59,7 @@ class CustomEntity: Entity, HasModel, HasAnchoring, HasCollision {
             }
             
             guard let paperPlane else {
-                print("PAPER PLANE ENTITY ISN'T DETECTED")
+                // the collision still happens even though the Cancellables array has been cleared and cancel()
                 return
             }
             

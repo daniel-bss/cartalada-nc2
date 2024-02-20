@@ -7,17 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650A20FC2B83F77B0072C7B1 /* PaperContainers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 650A20FA2B83F77B0072C7B1 /* PaperContainers.xcdatamodeld */; };
 		651498CE2B813D9600F0E70D /* CartaladaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498CD2B813D9600F0E70D /* CartaladaApp.swift */; };
 		651498D22B813DCD00F0E70D /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D12B813DCD00F0E70D /* MainAppView.swift */; };
 		651498D52B813E7800F0E70D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D42B813E7800F0E70D /* AppViewModel.swift */; };
 		651498D92B81612900F0E70D /* ChoosePaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651498D82B81612900F0E70D /* ChoosePaper.swift */; };
-		652706AA2B8299C100A189C6 /* planeblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706A92B8299C100A189C6 /* planeblue.usdz */; };
-		652706B12B829A2E00A189C6 /* planegreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AB2B829A2E00A189C6 /* planegreen.usdz */; };
-		652706B22B829A2E00A189C6 /* planelightblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AC2B829A2E00A189C6 /* planelightblue.usdz */; };
-		652706B32B829A2E00A189C6 /* planedefault.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AD2B829A2E00A189C6 /* planedefault.usdz */; };
-		652706B42B829A2E00A189C6 /* planelightgreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AE2B829A2E00A189C6 /* planelightgreen.usdz */; };
-		652706B52B829A2E00A189C6 /* planepink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706AF2B829A2E00A189C6 /* planepink.usdz */; };
-		652706B62B829A2E00A189C6 /* planeyellow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 652706B02B829A2E00A189C6 /* planeyellow.usdz */; };
 		652706B82B829AAE00A189C6 /* SelectPaperSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652706B72B829AAE00A189C6 /* SelectPaperSizeView.swift */; };
 		655674932B820BDC00B6CD4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655674922B820BDC00B6CD4D /* Utils.swift */; };
 		655674952B82190C00B6CD4D /* PostedPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655674942B82190C00B6CD4D /* PostedPaper.swift */; };
@@ -28,21 +22,22 @@
 		656CEAD72A200A94007E4166 /* CustomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CEAD62A200A94007E4166 /* CustomEntity.swift */; };
 		657737812A1AA57A00B7A99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657737802A1AA57A00B7A99E /* Assets.xcassets */; };
 		657737842A1AA57A00B7A99E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657737832A1AA57A00B7A99E /* Preview Assets.xcassets */; };
+		658918562B853A0600D137A5 /* planedefault.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6589184F2B853A0600D137A5 /* planedefault.usdz */; };
+		658918572B853A0600D137A5 /* planepink.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 658918502B853A0600D137A5 /* planepink.usdz */; };
+		658918582B853A0600D137A5 /* planelightgreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 658918512B853A0600D137A5 /* planelightgreen.usdz */; };
+		658918592B853A0600D137A5 /* planelightblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 658918522B853A0600D137A5 /* planelightblue.usdz */; };
+		6589185A2B853A0600D137A5 /* planeyellow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 658918532B853A0600D137A5 /* planeyellow.usdz */; };
+		6589185B2B853A0600D137A5 /* planegreen.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 658918542B853A0600D137A5 /* planegreen.usdz */; };
+		6589185C2B853A0600D137A5 /* planeblue.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 658918552B853A0600D137A5 /* planeblue.usdz */; };
 		65BBD0CB2A1BEC2400C7A204 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650A20FB2B83F77B0072C7B1 /* PaperContainers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaperContainers.xcdatamodel; sourceTree = "<group>"; };
 		651498CD2B813D9600F0E70D /* CartaladaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartaladaApp.swift; sourceTree = "<group>"; };
 		651498D12B813DCD00F0E70D /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
 		651498D42B813E7800F0E70D /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		651498D82B81612900F0E70D /* ChoosePaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePaper.swift; sourceTree = "<group>"; };
-		652706A92B8299C100A189C6 /* planeblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planeblue.usdz; sourceTree = "<group>"; };
-		652706AB2B829A2E00A189C6 /* planegreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planegreen.usdz; sourceTree = "<group>"; };
-		652706AC2B829A2E00A189C6 /* planelightblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planelightblue.usdz; sourceTree = "<group>"; };
-		652706AD2B829A2E00A189C6 /* planedefault.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planedefault.usdz; sourceTree = "<group>"; };
-		652706AE2B829A2E00A189C6 /* planelightgreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planelightgreen.usdz; sourceTree = "<group>"; };
-		652706AF2B829A2E00A189C6 /* planepink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planepink.usdz; sourceTree = "<group>"; };
-		652706B02B829A2E00A189C6 /* planeyellow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planeyellow.usdz; sourceTree = "<group>"; };
 		652706B72B829AAE00A189C6 /* SelectPaperSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaperSizeView.swift; sourceTree = "<group>"; };
 		655674922B820BDC00B6CD4D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		655674942B82190C00B6CD4D /* PostedPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedPaper.swift; sourceTree = "<group>"; };
@@ -54,6 +49,13 @@
 		657737772A1AA57900B7A99E /* Cartalada AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cartalada AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		657737802A1AA57A00B7A99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		657737832A1AA57A00B7A99E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6589184F2B853A0600D137A5 /* planedefault.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planedefault.usdz; sourceTree = "<group>"; };
+		658918502B853A0600D137A5 /* planepink.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planepink.usdz; sourceTree = "<group>"; };
+		658918512B853A0600D137A5 /* planelightgreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planelightgreen.usdz; sourceTree = "<group>"; };
+		658918522B853A0600D137A5 /* planelightblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planelightblue.usdz; sourceTree = "<group>"; };
+		658918532B853A0600D137A5 /* planeyellow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planeyellow.usdz; sourceTree = "<group>"; };
+		658918542B853A0600D137A5 /* planegreen.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planegreen.usdz; sourceTree = "<group>"; };
+		658918552B853A0600D137A5 /* planeblue.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = planeblue.usdz; sourceTree = "<group>"; };
 		65BBD0CA2A1BEC2400C7A204 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				656CEAD62A200A94007E4166 /* CustomEntity.swift */,
 				651498D82B81612900F0E70D /* ChoosePaper.swift */,
 				655674942B82190C00B6CD4D /* PostedPaper.swift */,
+				650A20FA2B83F77B0072C7B1 /* PaperContainers.xcdatamodeld */,
 			);
 			name = Models;
 			path = __main/Models;
@@ -82,13 +85,13 @@
 		652706A82B8299AE00A189C6 /* USDZ Assets */ = {
 			isa = PBXGroup;
 			children = (
-				652706AD2B829A2E00A189C6 /* planedefault.usdz */,
-				652706AB2B829A2E00A189C6 /* planegreen.usdz */,
-				652706AC2B829A2E00A189C6 /* planelightblue.usdz */,
-				652706AE2B829A2E00A189C6 /* planelightgreen.usdz */,
-				652706AF2B829A2E00A189C6 /* planepink.usdz */,
-				652706B02B829A2E00A189C6 /* planeyellow.usdz */,
-				652706A92B8299C100A189C6 /* planeblue.usdz */,
+				658918552B853A0600D137A5 /* planeblue.usdz */,
+				6589184F2B853A0600D137A5 /* planedefault.usdz */,
+				658918542B853A0600D137A5 /* planegreen.usdz */,
+				658918522B853A0600D137A5 /* planelightblue.usdz */,
+				658918512B853A0600D137A5 /* planelightgreen.usdz */,
+				658918502B853A0600D137A5 /* planepink.usdz */,
+				658918532B853A0600D137A5 /* planeyellow.usdz */,
 			);
 			path = "USDZ Assets";
 			sourceTree = "<group>";
@@ -212,15 +215,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652706B42B829A2E00A189C6 /* planelightgreen.usdz in Resources */,
-				652706B12B829A2E00A189C6 /* planegreen.usdz in Resources */,
-				652706AA2B8299C100A189C6 /* planeblue.usdz in Resources */,
-				652706B32B829A2E00A189C6 /* planedefault.usdz in Resources */,
-				652706B52B829A2E00A189C6 /* planepink.usdz in Resources */,
+				6589185A2B853A0600D137A5 /* planeyellow.usdz in Resources */,
+				6589185C2B853A0600D137A5 /* planeblue.usdz in Resources */,
+				658918572B853A0600D137A5 /* planepink.usdz in Resources */,
 				657737842A1AA57A00B7A99E /* Preview Assets.xcassets in Resources */,
-				652706B22B829A2E00A189C6 /* planelightblue.usdz in Resources */,
+				658918582B853A0600D137A5 /* planelightgreen.usdz in Resources */,
+				6589185B2B853A0600D137A5 /* planegreen.usdz in Resources */,
+				658918592B853A0600D137A5 /* planelightblue.usdz in Resources */,
 				657737812A1AA57A00B7A99E /* Assets.xcassets in Resources */,
-				652706B62B829A2E00A189C6 /* planeyellow.usdz in Resources */,
+				658918562B853A0600D137A5 /* planedefault.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +246,7 @@
 				652706B82B829AAE00A189C6 /* SelectPaperSizeView.swift in Sources */,
 				655947942A1ED32100D71942 /* Color+Ext.swift in Sources */,
 				651498D22B813DCD00F0E70D /* MainAppView.swift in Sources */,
+				650A20FC2B83F77B0072C7B1 /* PaperContainers.xcdatamodeld in Sources */,
 				655674932B820BDC00B6CD4D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +382,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cartalada AR";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access for AR experience";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need Camera permission to enable AR features.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -410,7 +414,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cartalada AR";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access for AR experience";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need Camera permission to enable AR features.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -452,6 +456,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		650A20FA2B83F77B0072C7B1 /* PaperContainers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				650A20FB2B83F77B0072C7B1 /* PaperContainers.xcdatamodel */,
+			);
+			currentVersion = 650A20FB2B83F77B0072C7B1 /* PaperContainers.xcdatamodel */;
+			path = PaperContainers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6577376F2A1AA57900B7A99E /* Project object */;
 }

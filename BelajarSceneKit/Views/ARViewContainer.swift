@@ -29,12 +29,12 @@ struct ARViewContainer: UIViewRepresentable {
         }
         
         func didCollide(postedPaper: PostedPaper) {
-            aRViewContainer.vm.postedPapers.append(postedPaper)
             aRViewContainer.vm.didFinishPosting = true
+            aRViewContainer.vm.addPaper(postedPaper: postedPaper) // proceed to core data
         }
     }
 
-    func makeUIView(context: Context) -> ARView {
+    func makeUIView(context: UIViewRepresentableContext<ARViewContainer>) -> ARView {
         let arView = ARView(frame: .zero)
         
         let anchor = AnchorEntity()
@@ -42,18 +42,13 @@ struct ARViewContainer: UIViewRepresentable {
         arView.scene.anchors.append(anchor)
         
         // ============ PAPAN
-//        let papan = CustomEntity(color: .green, position: SIMD3<Float>(0,0,-2.5))
-        let papan = CustomEntity(color: .green, position: SIMD3<Float>(0,0,-1.5))
+        let papan = createBoardEntity(context: context, arView: arView)
         
-        papan.collisionSubs.forEach {
-            $0.cancel()
-        }
-        papan.collisionSubs.removeAll()
-        papan.customEntityDelegate = context.coordinator
         anchor.addChild(papan)
 
         papan.addCollisions(arView: arView, paperVm: vm, paperColor: vm.paperColor, words: vm.words)
         
+        // ============ PAST POST-ITS
         self.createPostIt(arView: arView)
         
         // ============ PESAWAT
@@ -107,17 +102,19 @@ struct ARViewContainer: UIViewRepresentable {
         }
 
         modelEntity.position = SIMD3<Float>(0, -0.2, -0.35)
-        vm.planeTranslation = SIMD3<Float>(0, -0.3, -0.45)
+        
+        DispatchQueue.main.async {
+            vm.planeTranslation = SIMD3<Float>(0, -0.3, -0.35)
+        }
         
         modelEntity.collision = CollisionComponent(shapes: [.generateBox(size: SIMD3<Float>(0.16, 0.04, 0.21))])
-        modelEntity.physicsBody = .init()
-        modelEntity.physicsBody?.mode = .kinematic
+        
         anchor.addChild(modelEntity)
         
         return arView
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {
+    func updateUIView(_ uiView: ARView, context: UIViewRepresentableContext<ARViewContainer>) {
         let entities = uiView.scene.anchors[0].children
         
         // RESPOND TO JOYSTICK CONTROLVIEW
@@ -131,6 +128,65 @@ struct ARViewContainer: UIViewRepresentable {
         
     }
     
+    func createBoardEntity(context: UIViewRepresentableContext<ARViewContainer>, arView: ARView) -> CustomEntity {
+        let innerBoardWidth: Float = 2.35
+        let innerBoardHeight: Float = 1.15
+        
+        // note, hardcoded position would not affect when .addChild()
+        let outerBoard = CustomEntity(color: .darkGray, position: SIMD3<Float>(0, 0 , -2.5), width: innerBoardWidth + 0.15, height: innerBoardHeight + 0.15)
+        let innerBoard = CustomEntity(color: .white, position: SIMD3<Float>(0, 0 , -2.5), width: innerBoardWidth, height: innerBoardHeight)
+        
+        outerBoard.name = "papan-outer"
+        innerBoard.name = "papan-inner"
+        
+        outerBoard.collisionSubs.forEach {
+            $0.cancel()
+        }
+        outerBoard.collisionSubs.removeAll()
+        outerBoard.customEntityDelegate = context.coordinator
+        
+        innerBoard.collisionSubs.forEach {
+            $0.cancel()
+        }
+        innerBoard.collisionSubs.removeAll()
+        innerBoard.customEntityDelegate = context.coordinator
+        
+        innerBoard.position.z += 0.03
+        outerBoard.addChild(innerBoard)
+        
+        innerBoard.addCollisions(arView: arView, paperVm: vm, paperColor: vm.paperColor, words: vm.words)
+        
+        let textEntity = ModelEntity(
+            mesh: .generateText(
+                Utils.getFormattedDateString(date: Date()),
+                extrusionDepth: 0.001,
+                font: .systemFont(ofSize: 0.05, weight: .bold),
+                containerFrame: CGRect(
+                    x: Double(-innerBoardWidth / 2.0) + 0.04,
+                    y: 0,
+                    width: 0,
+                    height: 0
+                ),
+                alignment: .left,
+                lineBreakMode: .byWordWrapping
+            ),
+            materials: [
+                SimpleMaterial(
+                    color: UIColor.red,
+                    isMetallic: false
+                )
+            ]
+        )
+        
+        textEntity.position = .zero
+        textEntity.position.y += (innerBoardHeight / 2.0 - 0.08)
+        textEntity.position.z += 0.085
+        
+        outerBoard.addChild(textEntity)
+        
+        return outerBoard
+    }
+    
     // MARK: CREATE EXISTING POST-IT
     
     func createPostIt(arView: ARView) {
@@ -139,27 +195,29 @@ struct ARViewContainer: UIViewRepresentable {
         // GET PAPAN POSITION
         var papan = Entity()
         for entity in entities {
-            if entity.name == "papan" {
+            if entity.name.contains("papan") {
                 papan = entity
             }
         }
         
         // ADD EXISTING PAST PAPERS
         for postedPaper in vm.postedPapers {
-            
             var dimension: Float = 0
             var yOffset: Float = 0
             
             switch postedPaper.paperSize {
-            case .small:
+            case "small":
                 dimension = 0.2
                 yOffset = -0.095
-            case .medium:
+            case "medium":
                 dimension = 0.25
                 yOffset = -0.12
-            case .large:
+            case "large":
                 dimension = 0.3
                 yOffset = -0.15
+            default:
+                dimension = 0.2
+                yOffset = -0.095
             }
             
             let paperEntity = ModelEntity(
@@ -170,7 +228,7 @@ struct ARViewContainer: UIViewRepresentable {
                 ),
                 materials: [
                     SimpleMaterial(
-                        color: UIColor(postedPaper.color),
+                        color: Utils.hexStringToUIColor(hex: postedPaper.color),
                         isMetallic: false
                     )
                 ]
@@ -179,7 +237,7 @@ struct ARViewContainer: UIViewRepresentable {
             
             let textEntity = ModelEntity(
                 mesh: .generateText(
-                    postedPaper.words,
+                    postedPaper.words ?? "Failed to convert the input String",
                     extrusionDepth: 0.001,
                     font: .systemFont(ofSize: 0.017, weight: .bold),
                     containerFrame: CGRect(
@@ -200,8 +258,8 @@ struct ARViewContainer: UIViewRepresentable {
             )
             
             paperEntity.position = SIMD3<Float>(
-                x: postedPaper.position.x,
-                y: postedPaper.position.y,
+                x: postedPaper.xPosition,
+                y: postedPaper.yPosition,
                 z: papan.position.z + 0.05
             )
             
@@ -214,6 +272,7 @@ struct ARViewContainer: UIViewRepresentable {
         }
 
     }
+    
     
 }
 
